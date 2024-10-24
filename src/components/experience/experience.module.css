@@ -1,0 +1,6 @@
+.accordion-item {
+    border: none !important;
+    background: var(--grey-accent);
+    border-radius: 12px;
+    margin-bottom: 8px;
+}

@@ -1,8 +1,11 @@
-import Projects from "../components/Projects";
+import ImageCabinet from "../components/image-flipper";
+// import Projects from "../components/Projects";
 
 const ProjectsPage = () => {
 	return <div>
-		<Projects />
+		{/* <Projects /> */}
+
+		<ImageCabinet />
 	</div>;
 };
 

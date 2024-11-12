@@ -2,7 +2,7 @@ import HeaderCard from "../components/cards/HeaderCard";
 
 const AboutPage = () => {
 	return (
-		<div className={`flex flex-col-reverse md:flex-row gap-16 items-start md:items-center mb-8`}>
+		<section className={`flex flex-col-reverse md:flex-row gap-16 items-start md:items-center mb-8 h-[100dvh]`}>
 			<div className="w-full md:w-8/12">
 				<HeaderCard
 					title="Get to know me"
@@ -50,7 +50,7 @@ const AboutPage = () => {
 					className="w-full h-[400px] object-cover object-center"
 				/>
 			</div>
-		</div>
+		</section>
 	);
 };
 

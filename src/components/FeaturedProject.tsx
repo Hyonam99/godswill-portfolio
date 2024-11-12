@@ -17,7 +17,7 @@ interface ConatinerProps {
 
 const FeaturedProject = () => {
 	return (
-		<div className="py-12 flex flex-col gap-12">
+		<div className="flex flex-col gap-12 mb-8 md:mb-20">
 			<ProjectContainer
 				title="Featured Project"
 				heading="Troo"
@@ -53,7 +53,7 @@ const ProjectContainer = (props: ConatinerProps) => {
 		imageUrl = "/static-images/mockup-image.jpg",
 		appleStoreLink,
 		playStoreLink,
-		webLink
+		webLink,
 	} = props;
 
 	return (
@@ -73,7 +73,11 @@ const ProjectContainer = (props: ConatinerProps) => {
 
 				<div className="flex items-center gap-2 py-2">
 					{webLink !== "" && (
-						<Link to={webLink} target="_blank" className="flex items-center gap-1">
+						<Link
+							to={webLink}
+							target="_blank"
+							className="flex items-center gap-1"
+						>
 							<BiWorld size={16} /> visit
 						</Link>
 					)}

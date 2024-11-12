@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
 	return (
-		<section className="min-h-[78dvh] flex flex-col md:flex-row items-center mb-6 md:mb-0">
+		<section className="min-h-[78dvh] flex flex-col md:flex-row items-center mb-8 md:mb-20">
 			<section className="w-full md:w-1/3 mb-6 md:mb-0">
 				<img
 					src="https://sitefile.co/666e3ce3b3394452a5bf523d/1718504267681_EA3ABE00-2915-43D5-B704-7410C39723A2.jpeg"

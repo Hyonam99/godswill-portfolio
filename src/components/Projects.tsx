@@ -16,7 +16,7 @@ import { GrAppleAppStore } from "react-icons/gr";
 
 const Projects = () => {
 	return (
-		<div>
+		<div className="mb-8 md:mb-20">
 			<HeaderCard
 				title="Passion"
 				titleBg="bg-stone-accent"
@@ -24,7 +24,7 @@ const Projects = () => {
 				description="Turning fun ideas into impact driven solutions"
 			/>
 
-			<SimpleGrid minChildWidth="300px" spacing="16px" marginTop={14}>
+			<SimpleGrid minChildWidth="300px" spacing="16px" marginTop={4}>
 				{projects.slice(2).map((project: ProjectData, i: number) => {
 					return (
 						<Card

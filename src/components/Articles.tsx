@@ -6,14 +6,14 @@ import { FaHashnode, FaMedium } from "react-icons/fa6";
 
 const Articles = () => {
 	return (
-		<div className="my-8">
+		<div className="mb-8 md:mb-20">
 			<HeaderCard
 				title="Giving to the community"
 				heading="Articles"
 				description="Explore my insights on tech, product management, innovation and life in my writings."
 			/>
 
-			<SimpleGrid minChildWidth="260px" spacing="16px" marginTop={14}>
+			<SimpleGrid minChildWidth="260px" spacing="16px" marginTop={4}>
 				<Card
 					size="sm"
 					bg={"#111111"}

@@ -31,7 +31,7 @@ const ProjectsPage = () => {
 					<Accordion
 						defaultIndex={[0]}
 						allowMultiple
-						marginTop={14}
+						marginTop={4}
 						className={style["accordion-container"]}
 					>
 						<AccordionItem paddingY={2} className={style["accordion-item"]}>

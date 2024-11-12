@@ -9,11 +9,11 @@ import {
 	ListItem,
 	UnorderedList,
 } from "@chakra-ui/react";
-import style from "./experience.module.css"
+import style from "./experience.module.css";
 
 const Experience = () => {
 	return (
-		<div>
+		<div className="mb-8 md:mb-20">
 			<HeaderCard
 				title="Career"
 				heading="Experiences"
@@ -23,7 +23,7 @@ const Experience = () => {
 			<Accordion
 				defaultIndex={[0]}
 				allowMultiple
-				marginTop={14}
+				marginTop={4}
 				className={style["accordion-container"]}
 			>
 				<AccordionItem paddingY={2} className={style["accordion-item"]}>

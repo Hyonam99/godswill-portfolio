@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
 	return (
-		<div className="bg-grey-accent p-4 md:p-8 rounded-xl my-8">
+		<div className="bg-grey-accent p-4 md:p-8 rounded-xl mb-8 md:mb-20">
 			<HeaderCard
 				title="Let's Connect"
 				titleBg="bg-stone-accent"
@@ -14,7 +14,7 @@ const Contact = () => {
 				description="Explore my diverse skill set, a testament to my commitment to delivering excellence in product management."
 			/>
 
-			<SimpleGrid minChildWidth="260px" spacing="16px" marginTop={14}>
+			<SimpleGrid minChildWidth="260px" spacing="16px" marginTop={4}>
 				{contacts.map((contact: ContactData, i: number) => {
 					const ContactIcon = contact.icon;
 

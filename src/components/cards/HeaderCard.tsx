@@ -16,7 +16,7 @@ const HeaderCard = (props:  HeaderCardProps) => {
 		} = props;
 
   return (
-		<div>
+		<div className="">
 			<span
 				className={`${titleBg} py-1 px-2 rounded-md uppercase text-xs ${titleColor} font-semibold`}
 			>

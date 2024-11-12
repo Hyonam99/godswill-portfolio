@@ -1,18 +1,12 @@
-import {
-	Card,
-	CardBody,
-	Heading,
-	Text,
-	SimpleGrid,
-} from "@chakra-ui/react";
+import { Card, CardBody, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import HeaderCard from "../cards/HeaderCard";
 import { skills } from "../../data";
 import { SkillsData } from "../../types";
-import "./skills.css"
+import "./skills.css";
 
 const Skills = () => {
 	return (
-		<div className="bg-grey-accent p-4 md:p-8 rounded-xl mt-8">
+		<div className="bg-grey-accent p-4 md:p-8 rounded-xl mt-8 mb-8 md:mb-20">
 			<HeaderCard
 				title="Proficiencies"
 				titleBg="bg-stone-accent"
@@ -20,7 +14,7 @@ const Skills = () => {
 				description="Explore my diverse skill set, a testament to my commitment to delivering excellence in product management."
 			/>
 
-			<SimpleGrid minChildWidth="260px" spacing="16px" marginTop={14}>
+			<SimpleGrid minChildWidth="260px" spacing="16px" marginTop={4}>
 				{skills.map((skill: SkillsData, i: number) => {
 					// const SkillIcon = skill.icon;
 

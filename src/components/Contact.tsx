@@ -1,11 +1,12 @@
-import { Card, CardBody, Heading, Text, SimpleGrid } from "@chakra-ui/react";
+import { Card, CardBody, SimpleGrid } from "@chakra-ui/react";
 import HeaderCard from "./cards/HeaderCard";
 import { contacts } from "../data";
 import { ContactData } from "../types";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
 	return (
-		<div className="bg-grey-accent p-8 rounded-xl my-8">
+		<div className="bg-grey-accent p-4 md:p-8 rounded-xl my-8">
 			<HeaderCard
 				title="Let's Connect"
 				titleBg="bg-stone-accent"
@@ -13,7 +14,7 @@ const Contact = () => {
 				description="Explore my diverse skill set, a testament to my commitment to delivering excellence in product management."
 			/>
 
-			<SimpleGrid minChildWidth="300px" spacing="16px" marginTop={14}>
+			<SimpleGrid minChildWidth="260px" spacing="16px" marginTop={14}>
 				{contacts.map((contact: ContactData, i: number) => {
 					const ContactIcon = contact.icon;
 
@@ -24,20 +25,29 @@ const Contact = () => {
 							bg={"#111111"}
 							padding={2}
 							borderRadius={8}
-							className="skills-card"
+							// className="skills-card"
 						>
-							<CardBody>
-								<Heading size="sm" className="text-white">
-									{" "}
-									{contact.title}
-								</Heading>
-								<Text className="text-light-grey-accent text-sm">
-									{contact.description}
-								</Text>
+							<CardBody
+								sx={{
+									display: "flex",
+									alignItems: "center",
+									justifyContent: "space-between",
+								}}
+							>
+								<div>
+									<h2 className="text-white"> {contact.title}</h2>
+									<p className="text-light-grey-accent text-sm">
+										{contact.description}
+									</p>
+								</div>
+								<Link
+									to={contact.linkUrl}
+									target="_blank"
+									className="flex items-center justify-center bg-white p-4 rounded-full"
+								>
+									<ContactIcon color={"#747474"} size={24} />
+								</Link>
 							</CardBody>
-							<div className="flex items-center justify-center bg-white p-6 rounded-full">
-								<ContactIcon color={"#747474"} size={24} />
-							</div>
 						</Card>
 					);
 				})}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./image-flipper.css";
+import { projects } from "../../data";
 
 const ImageCabinet = () => {
 	const [hoveredIndex, setHoveredIndex] = useState<number>(0);
@@ -14,11 +15,9 @@ const ImageCabinet = () => {
 		setShowOverlay(false);
 	};
 
-	const cards = [1, 2, 3, 4, 5]; // Just for example, add actual content or images
-
 	return (
 		<div className="cards-container">
-			{cards.map((_, index) => (
+			{projects.map((project, index) => (
 				<div
 					key={index}
 					className={`card ${hoveredIndex === index ? "hovered" : ""}`}
@@ -30,7 +29,7 @@ const ImageCabinet = () => {
 							hoveredIndex === index && showOverlay ? "overlay" : "hide"
 						}`}
 					>
-						<h2 className={`text-2xl font-semibold`}>TribePay!</h2>
+						<h2 className={`text-2xl font-semibold`}>{project.title}!</h2>
 						<p
 							className={`${
 								hoveredIndex === index && showOverlay
@@ -38,12 +37,11 @@ const ImageCabinet = () => {
 									: "hide-text"
 							}`}
 						>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quas
-							deleniti enim?
+							{project.description}
 						</p>
 					</div>
 					{/* Content of each card goes here */}
-					<img src={`/static-images/mockup-image.jpg`} alt={`Card ${index}`} />
+					<img src={project.imageUrl} alt={`Card ${index}`} />
 				</div>
 			))}
 		</div>

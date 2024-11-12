@@ -1,3 +1,4 @@
+import Articles from "./components/Articles";
 import Contact from "./components/Contact";
 import Experience from "./components/experience/Experience";
 import FeaturedProject from "./components/FeaturedProject";
@@ -15,6 +16,7 @@ const HomePage = () => {
 			<FeaturedProject />
 			<Projects />
 			<Volunteering />
+			<Articles />
 			<Contact />
 		</div>
 	);

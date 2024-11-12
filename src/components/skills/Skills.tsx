@@ -12,17 +12,17 @@ import "./skills.css"
 
 const Skills = () => {
 	return (
-		<div className="bg-grey-accent p-8 rounded-xl mt-8">
+		<div className="bg-grey-accent p-4 md:p-8 rounded-xl mt-8">
 			<HeaderCard
-				title="Skills and Tools"
+				title="Proficiencies"
 				titleBg="bg-stone-accent"
-				heading="Skills"
+				heading="Skills and Tools"
 				description="Explore my diverse skill set, a testament to my commitment to delivering excellence in product management."
 			/>
 
-			<SimpleGrid minChildWidth="300px" spacing="16px" marginTop={14}>
+			<SimpleGrid minChildWidth="260px" spacing="16px" marginTop={14}>
 				{skills.map((skill: SkillsData, i: number) => {
-					const SkillIcon = skill.icon;
+					// const SkillIcon = skill.icon;
 
 					return (
 						<Card
@@ -33,16 +33,21 @@ const Skills = () => {
 							borderRadius={8}
 							className="skills-card"
 						>
-							<div className="flex items-center justify-center bg-white p-6 rounded-md">
-								<SkillIcon color={"#747474"} size={32} />
-							</div>
+							{/* <div className="absolute right-2 top-3 flex items-center justify-center bg-white p-2 rounded-full">
+								<SkillIcon color={"#747474"} size={18} />
+							</div> */}
 							<CardBody>
-								<Heading size="sm" className="text-white">
+								<Heading size="sm" className="text-white mb-1">
 									{" "}
 									{skill.title}
 								</Heading>
+								<Text className="text-light-grey-accent text-sm mb-1">
+									<span className="text-[#cbe3f6d5]">{skill.firstTag}: </span>{" "}
+									{skill.firstDesc}
+								</Text>
 								<Text className="text-light-grey-accent text-sm">
-									{skill.description}
+									<span className="text-[#cbe3f6d5]">{skill.secondTag}: </span>
+									{skill.secondDesc}
 								</Text>
 							</CardBody>
 						</Card>

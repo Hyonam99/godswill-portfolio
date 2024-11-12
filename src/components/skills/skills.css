@@ -1,4 +1,5 @@
 .skills-card {
+    position: relative;
     display: flex !important;
     flex-direction: row !important;
     gap: 8px !important;

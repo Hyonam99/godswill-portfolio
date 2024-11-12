@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { projects } from "../data";
 import { ProjectData } from "../types";
 import HeaderCard from "./cards/HeaderCard";
@@ -8,10 +9,10 @@ import {
 	Text,
 	SimpleGrid,
 	CardFooter,
-	Button,
 	IconButton,
 } from "@chakra-ui/react";
 import { BiLogoPlayStore } from "react-icons/bi";
+import { GrAppleAppStore } from "react-icons/gr";
 
 const Projects = () => {
 	return (
@@ -24,8 +25,7 @@ const Projects = () => {
 			/>
 
 			<SimpleGrid minChildWidth="300px" spacing="16px" marginTop={14}>
-				{projects.map((project: ProjectData, i: number) => {
-
+				{projects.slice(2).map((project: ProjectData, i: number) => {
 					return (
 						<Card
 							key={`${project.title}-${i + 1}`}
@@ -35,8 +35,11 @@ const Projects = () => {
 							borderRadius={8}
 							className="project-card"
 						>
-							<div className="flex items-center justify-center bg-white rounded-md">
-								<img src={project.imageUrl} />
+							<div className="bg-white rounded-xl h-[268px]">
+								<img
+									src={project.imageUrl}
+									className="w-full h-[268px] rounded-xl object-cover object-center"
+								/>
 							</div>
 							<CardBody>
 								<Heading size="sm" className="text-white">
@@ -48,11 +51,32 @@ const Projects = () => {
 								</Text>
 							</CardBody>
 							<CardFooter>
-								<Button sx={{ width: "100%", marginRight: "8px" }}>View Website</Button>
-								<IconButton
-									aria-label="view-mobile-app"
-									icon={<BiLogoPlayStore size={24} />}
-								/>
+								{project.webLink !== "" && (
+									<Link
+										to={project.webLink}
+										target="_blank"
+										className="w-full text-center bg-white py-2 px-5 rounded-md mr-2 hover:text-stone-accent"
+									>
+										View Website
+									</Link>
+								)}
+								{project.playStoreLink !== "" && (
+									<Link to={project.playStoreLink} target="_blank">
+										<IconButton
+											aria-label="view-mobile-app"
+											icon={<BiLogoPlayStore size={24} />}
+											marginRight={2}
+										/>
+									</Link>
+								)}
+								{project.appleStoreLink !== "" && (
+									<Link to={project.appleStoreLink} target="_blank">
+										<IconButton
+											aria-label="view-mobile-app"
+											icon={<GrAppleAppStore size={24} />}
+										/>
+									</Link>
+								)}
 							</CardFooter>
 						</Card>
 					);

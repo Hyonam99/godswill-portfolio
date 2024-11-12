@@ -9,6 +9,7 @@
   --grey-accent: #222222;
   --navy-accent: #0d4170;
   --light-navy-accent: #75b6e8;
+  --light-navy-accent-2: #cbe3f6d5;
   --light-grey-accent: #747474;
   --stone-accent: #111111;
   font-family: Arima Madurai, cursive, system-ui;
@@ -94,3 +95,9 @@ h1 {
     background-color: #f9f9f9;
   }
 } */
+
+@media screen and (max-width: 768px) {
+  a:hover {
+  color: var(--navy-accent);
+}
+}

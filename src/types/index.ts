@@ -3,12 +3,16 @@ export type ProjectData = {
 	description: string;
     imageUrl: string;
     webLink: string
-    appLink: string
+    appleStoreLink: string
+    playStoreLink: string
 };
 
 export type SkillsData = {
     title: string
-    description: string
+    firstDesc: string
+    firstTag: string
+    secondTag: string
+    secondDesc: string
     icon: any
 }
 

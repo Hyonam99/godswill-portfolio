@@ -27,14 +27,18 @@ const ProjectsPage = () => {
 			</div>
 
 			<div className="block md:hidden">
-				{projects.map((project, i) => (
-					<Accordion
-						defaultIndex={[0]}
-						allowMultiple
-						marginTop={4}
-						className={style["accordion-container"]}
-					>
-						<AccordionItem paddingY={2} className={style["accordion-item"]}>
+				<Accordion
+					defaultIndex={[0]}
+					allowMultiple
+					marginTop={4}
+					className={style["accordion-container"]}
+				>
+					{projects.map((project, i) => (
+						<AccordionItem
+							key={i + 1}
+							paddingY={2}
+							className={style["accordion-item"]}
+						>
 							<h2>
 								<AccordionButton>
 									<Box as="span" flex="1" textAlign="left">
@@ -95,8 +99,8 @@ const ProjectsPage = () => {
 								</Card>
 							</AccordionPanel>
 						</AccordionItem>
-					</Accordion>
-				))}
+					))}
+				</Accordion>
 			</div>
 		</section>
 	);

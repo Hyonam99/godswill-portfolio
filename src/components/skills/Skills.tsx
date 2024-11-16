@@ -1,8 +1,7 @@
-import { Card, CardBody, Heading, Text, SimpleGrid } from "@chakra-ui/react";
+import { Card, CardBody, CardHeader, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import HeaderCard from "../cards/HeaderCard";
 import { skills } from "../../data";
 import { SkillsData } from "../../types";
-import "./skills.css";
 
 const Skills = () => {
 	return (
@@ -30,11 +29,13 @@ const Skills = () => {
 							{/* <div className="absolute right-2 top-3 flex items-center justify-center bg-white p-2 rounded-full">
 								<SkillIcon color={"#747474"} size={18} />
 							</div> */}
-							<CardBody>
+							<CardHeader className="h-10 mb-2">
 								<Heading size="sm" className="text-white mb-1">
 									{" "}
 									{skill.title}
 								</Heading>
+							</CardHeader>
+							<CardBody>
 								<Text className="text-light-grey-accent text-sm mb-1">
 									<span className="text-[#cbe3f6d5]">{skill.firstTag}: </span>{" "}
 									{skill.firstDesc}

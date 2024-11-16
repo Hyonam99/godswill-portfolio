@@ -60,7 +60,7 @@ const ProjectsPage = () => {
 										<img src={project.imageUrl} />
 									</div>
 									<CardBody>
-										<Heading size="sm" className="text-white">
+										<Heading size="sm" className="text-white my-3">
 											{" "}
 											{project.title}
 										</Heading>
